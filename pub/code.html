@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>Custom Cards Code Page</title>
+
+    <link rel="stylesheet" href="js/style.css">
+ </head>
+ <body>
+
+    <div id='wrapper'>
+        <h1 class='display' id='title'>Code For Examples</h1>
+
+         <div class="display">
+            <h4><a href="/">Main Page</a></h4>
+            <h4><a href="/api">API</a></h4>
+         </div>
+
+         <div class="display">
+            <h3>[Add Card]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const add = new CustomCards()
+               add.addCardButton('add-bt', 'card-add', 'Add a Card')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='add-bt'&gt;
+                  &lt;strong>[Add Card]&lt;/strong&gt; Add cards with a simple button: 
+               &lt;/div&gt;
+               &lt;div id='card-add'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Add Card with template]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const addWTemplate = new CustomCards()
+               const addWTemplate1 = addWTemplate.addCard('card-add-template')
+               addWTemplate.modifyColors('cyan')
+               addWTemplate.modifySizes(500, 200)
+               addWTemplate.addCardWTemplateButton('add-template-bt', 'card-add-template', 'Add a Card based on template', addWTemplate1)
+            </pre>
+   
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='add-template-bt'&gt;
+                  &lt;strong>[Add Card with template]&lt;/strong&gt; You can also create/add cards based on an existing card and use it as a template, which will inherit all of its styles: 
+               &lt;/div&gt;
+               &lt;div id='card-add-template'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Change title]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const changeTitleSingle = new CustomCards()
+               const changeTitleSingle1 = changeTitleSingle.addCard('card-change-title-single')
+               changeTitleSingle.addChangeTitleButton('change-title-single-bt', 'Change title')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='change-title-single-bt'&gt;
+                  &lt;strong>[Change title]&lt;/strong&gt; You can change the title of a card: 
+               &lt;/div&gt;
+               &lt;div id='card-change-title-single'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Change titles]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const changeTitle = new CustomCards()
+               const changeTitle1 = changeTitle.addCard('card-change-title')
+               const changeTitle2 = changeTitle.addCard('card-change-title')
+               const changeTitle3 = changeTitle.addCard('card-change-title')
+               changeTitle.addChangeTitleButton('change-title-bt', 'Change titles')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='change-title-bt'&gt;
+                  &lt;strong>[Change titles]&lt;/strong&gt; Or you can change the titles of multiple cards: 
+               &lt;/div&gt;
+               &lt;div id='card-change-title'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Edit body]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const editBodySingle = new CustomCards()
+               const editBodySingle1 = editBodySingle.addCard('card-edit-body-single')
+               editBodySingle.addEditBodyButton('edit-body-single-bt', 'Edit Card text')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='edit-body-single-bt'&gt;
+                  &lt;strong>[Edit body]&lt;/strong&gt; You can edit the body of a card: 
+               &lt;/div&gt;
+               &lt;div id='card-edit-body-single'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Add element]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const addToBody = new CustomCards()
+               const addToBody1 = addToBody.addCard('card-add-elem')
+               const circle = document.createElement('span')
+               circle.className = 'circle'
+               addToBody.addAppendElementButton('add-elem-bt', circle, 'Add a blue circle to Card')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='add-elem-bt'&gt;
+                  &lt;strong>[[Add element]&lt;/strong&gt; You can add an element to the body of a card, and the size of the Card will grow dynamically with the content inside. Here for 
+                  example it is adding a blue circle:
+               &lt;/div&gt;
+               &lt;div id='card-add-elem'&gt;&lt;/div&gt;
+            </pre>
+
+            <h4>CSS</h4>
+            <pre>
+               .circle {
+                  height: 100px;
+                  width: 100px;
+                  background-color: lightskyblue;
+                  border-radius: 50%;
+                  display: inline-block;
+                  margin: 5px;
+              }
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Change color]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const modifyColor = new CustomCards()
+               const modifyColor1 = modifyColor.addCard('card-modify-color')
+               const modifyColor2 = modifyColor.addCard('card-modify-color')
+               const modifyColor3 = modifyColor.addCard('card-modify-color')
+               modifyColor.addModifyColorButton('modify-color-bt', 'lightgreen', 'Change to light green')
+               modifyColor.addModifyColorButton('modify-color-bt', 'lightpink', 'Change to light pink')
+               modifyColor.addModifyColorButton('modify-color-bt', 'lightseagreen', 'Change to light seagreen')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='modify-color-bt'&gt;
+                  &lt;strong>[Change color]&lt;/strong&gt; You can change the color of cards, here are a few examples: 
+               &lt;/div&gt;
+               &lt;div id='card-modify-color'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Change size]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const modifySize = new CustomCards()
+               const modifySize1 = modifySize.addCard('card-modify-size')
+               const modifySize2 = modifySize.addCard('card-modify-size')
+               const modifySize3 = modifySize.addCard('card-modify-size')
+               modifySize.addModifySizeButton('modify-size-bt', 200, 150, 'Change to a small size')
+               modifySize.addModifySizeButton('modify-size-bt', 400, 300, 'Change to default size')
+               modifySize.addModifySizeButton('modify-size-bt', 600, 450, 'Change to a big size')
+
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='modify-size-bt'&gt;
+                  &lt;strong>[Change size]&lt;/strong&gt; You can change the minimum size of cards, here are a few examples: 
+               &lt;/div&gt;
+               &lt;div id='card-modify-size'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Make collapsible]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const collapsible = new CustomCards()
+               const collapsible1 = collapsible.addCard('card-collapsible')
+               const collapsible2 = collapsible.addCard('card-collapsible')
+               const collapsible3 = collapsible.addCard('card-collapsible')
+               collapsible.addToBodySingle(collapsible1, circle)
+               collapsible.addToBodySingle(collapsible2, circle)
+               collapsible.addToBodySingle(collapsible2, circle)
+               collapsible.addToBodySingle(collapsible3, circle)
+               collapsible.addToBodySingle(collapsible3, circle)
+               collapsible.addToBodySingle(collapsible3, circle)
+               collapsible.addCollapsibleButton('collapsible-bt', 'Make Cards collapsible')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='collapsible-bt'&gt;
+                  &lt;strong>[Make collapsible]&lt;/strong&gt; You can make cards collapsible, click on the title of a card to collapse its content, and click it again to show the content. When 
+                  the title contains the "-" symbol, it means that clicking on it will collapse the card, if it has the "+" symbol, it means that clicking on it will show the content of the card: 
+               &lt;/div&gt;
+               &lt;div id='card-collapsible'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Make draggable]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const draggable = new CustomCards()
+               const draggable1 = draggable.addCard('card-draggable')
+               const draggable2 = draggable.addCard('card-draggable')
+               const draggable3 = draggable.addCard('card-draggable')
+               // example text elements added to showcase the feature more clearly
+               const text1 = document.createElement('div')
+               text1.innerHTML = 'this is the first card'
+               const text2 = document.createElement('div')
+               text2.innerHTML = 'this is the second card'
+               const text3 = document.createElement('div')
+               text3.innerHTML = 'this is the third card'
+               draggable.addToBodySingle(draggable1, text1)
+               draggable.addToBodySingle(draggable2, text2)
+               draggable.addToBodySingle(draggable3, text3)
+               draggable.addDraggableButton('draggable-bt', 'Toggle draggability')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='draggable-bt'&gt;
+                  &lt;strong>[Make draggable]&lt;/strong&gt; You can make cards draggable; cards can be dropped onto another card to switch the position of the two cards: 
+               &lt;/div&gt;
+               &lt;div id='card-draggable'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Remove box]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               draggable.addRemoveCardBox('remove-box')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='remove-box'&gt;
+                  &lt;strong>[Remove box]&lt;/strong&gt; You can also remove a card by dragging it into an area such as the box below: 
+               &lt;/div&gt;
+            </pre>
+
+            <h4>CSS</h4>
+            <pre>
+               #remove-card {
+                  width: 80%;
+                  height: 200px;
+                  margin: 0 auto;
+                  margin-top: 20px;
+                  background-color: lightsalmon;
+                  border: 2px solid black;
+              }
+            </pre>
+
+         </div><br>
+
+
+         <div class="display">
+            <h3>[Combined features]</h3>
+            <h4>Javascript</h4>
+            <pre>
+               const combined = new CustomCards()
+               const combined1 = combined.addCard('card-combined')
+               const combined2 = combined.addCard('card-combined')
+               const combined3 = combined.addCard('card-combined')
+               combined.addChangeTitleButton('combined-bt', 'Change titles')
+               combined.addEditBodyButton('combined-bt', 'Edit Cards text')
+               combined.addModifyColorButton('combined-bt', 'lightgreen', 'Change to light green')
+               combined.addModifyColorButton('combined-bt', 'lightpink', 'Change to light pink')
+               combined.addModifyColorButton('combined-bt', 'lightseagreen', 'Change to light seagreen')
+               combined.addModifySizeButton('combined-bt', 200, 150, 'Change to a small size')
+               combined.addModifySizeButton('combined-bt', 400, 300, 'Change to default size')
+               combined.addModifySizeButton('combined-bt', 600, 450, 'Change to a big size')
+               combined.addCollapsibleButton('combined-bt', 'Make Cards collapsible')
+               combined.addDraggableButton('combined-bt', 'Toggle draggability')
+            </pre>
+
+            <h4>HTML</h4>
+            <pre>
+               &lt;div class='display' id='combined-bt'&gt;
+                  &lt;strong>[Combined features]&lt;/strong&gt; Here is some cards with some combined features: 
+               &lt;/div&gt;
+               &lt;div id='card-combined'&gt;&lt;/div&gt;
+            </pre>
+
+         </div><br>
+
+    </div>
+
+ </body>
+
+</html>

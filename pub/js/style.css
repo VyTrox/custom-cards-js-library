@@ -1,0 +1,63 @@
+html *
+{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#wrapper {
+    width: 85%;
+    margin: 0 auto;
+    background-color: lightgray;
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.2);
+    overflow-wrap: break-word;
+}
+
+.display {
+    display: block;
+    margin: 20px;
+}
+
+h1 {
+    color: white;
+    text-shadow: 1px 2px 1px #000000;
+}
+
+h3 {
+    color: white;
+    text-shadow: 1px 1px 1px #333333;
+    background-color: darkgray;
+    padding: 5px;
+}
+
+h4 {
+    display: inline;
+    margin-right: 1em;
+}
+
+#textarea {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.button {
+    margin: 5px;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    background-color: lightskyblue;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+}
+
+#remove-card {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: lightsalmon;
+    border: 2px solid black;
+}

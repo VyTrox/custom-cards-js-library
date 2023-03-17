@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>Custom Cards API Page</title>
+
+    <link rel="stylesheet" href="js/style.css">
+ </head>
+ <body>
+
+    <div id='wrapper'>
+        <h1 class='display' id='title'>API Documentation</h1>
+
+        <div class="display">
+         <h4><a href="/">Main Page</a></h4>
+         <h4><a href="/code">Code For Examples</a></h4>
+      </div>
+
+
+      <div class="display">
+         <h3>Methods</h3>
+         <h4>Developer Methods</h4>
+         <pre>
+            // add a card to the CustomCards instance
+            addCard(parentId, titleName, templateCard)
+
+               - parentId: The id of the parent element where the card will be added
+               - titleName: The initial title of the card, if null it will be set to the card's full id
+               - templateCard: The card used as template to create the card, if null then no template will be used
+   
+
+            // remove a card from the CustomCards instance
+            removeCard(parentId, card)
+
+               - parentId: The id of the parent element where the card will be removeCard
+               - card: The card to be removed
+   
+
+            // get a card by its id
+            getCardById(id)
+
+               - id: The full id of the card to get
+   
+
+            // get the id number of the card
+            getCardId(card)
+            
+               - card: The card with the id to get
+   
+
+            // modify the titles of all cards in the CustomCards instance (numbered)
+            modifyTitles(text)
+
+               - text: The new title to change to
+   
+
+            // modify the title of a single card
+            modifyTitleSingle(card, text)
+
+               - card: The card that will change title
+               - text: The new title to change to
+   
+
+            // modify the colors of all cards in the CustomCards instance
+            modifyColors(color)
+
+               - color: The new color to change to
+   
+
+            // modify the color of a single card
+            modifyColorSingle(card, color)
+
+               - card: The card that will change color
+               - color: The new color to change to
+   
+
+            // add an element to the bodies of all cards in the CustomCards instance
+            addToBody(element)
+
+               - element: The element to add to the bodies of cards
+   
+
+            // add an element to the body of a single card
+            addToBodySingle(card, element)
+
+               - card: The card that will add the new element to its body
+               - element: The element to add to the body of the card
+   
+
+            // returns an array of cards with the corresponding color that are in the CustomCards instance
+            filterByColor(color)
+
+               - color: The desired color to filter the cards with
+   
+
+            // modify the sizes of all cards in the CustomCards instance
+            modifySizes(width, height)
+
+               - width: The new width to change to
+               - height: The new height to change to
+   
+
+            // modify the size of a single card
+            modifySizeSingle(card, width, height)
+
+               - card: The card that will change size
+               - width: The new width to change to
+               - height: The new height to change to
+   
+
+            // make all cards in the CustomCards instance collapsible, meaning the body of the card can be hidden or shown
+            makeCollapsible()
+   
+
+            // make a single card collapsible
+            makeCollapsibleSingle(card)
+            
+               - card: The card that will be made collapsible
+   
+
+            // make all cards in the CustomCards instance draggable, meaning that they can be dragged onto another card and switch positions
+            makeDraggable()
+   
+
+            // make all cards in the CustomCards instance undraggable
+            makeUndraggable()
+         </pre>
+
+         <h4>User Interaction Buttons</h4><br>
+
+         <pre>
+            // add a button to create a new card
+            addCardButton(parentId, cardParentId, name)
+
+               - parentId: The id of the parent element where the button will be added
+               - cardParentId: The id of the parent element where the cards will be added
+               - name: The name of the button
+   
+
+            // add a button to create a new card based on a template card
+            addCardWTemplateButton(parentId, cardParentId, name, template)
+
+               - parentId: The id of the parent element where the button will be added
+               - cardParentId: The id of the parent element where the cards will be added
+               - name: The name of the button
+               - template: The card that will be used as a template to create new cards
+   
+
+            // add a button to allow title change of a card
+            addChangeTitleButton(parentId, name)
+
+               - parentId: The id of the parent element where the button will be added
+               - name: The name of the button
+   
+
+            // add a button to allow the editing of the body of a card
+            addEditBodyButton(parentId, name)
+
+               - parentId: The id of the parent element where the button will be added
+               - name: The name of the button
+   
+
+            // add a button that appends an element to the body of a card
+            addAppendElementButton(parentId, elem, name)
+
+               - parentId: The id of the parent element where the button will be added
+               - elem: The element to add to the body of the cards
+               - name: The name of the button
+   
+
+            // add a button to allow color modification
+            addModifyColorButton(parentId, color, name)
+
+               - parentId: The id of the parent element where the button will be added
+               - color: The color that the cards will be changed to
+               - name: The name of the button
+   
+
+            // add a button to allow size change
+            addModifySizeButton(parentId, width, height, name)
+
+               - parentId: The id of the parent element where the button will be added
+               - width: The width that the cards will be changed to
+               - height: The height that the cards will be changed to
+               - name: The name of the button
+   
+
+            // add a button to make cards collapsible
+            addCollapsibleButton(parentId, name)
+
+               - parentId: The id of the parent element where the button will be added
+               - name: The name of the button
+   
+
+            // add a button that toggles draggability
+            addDraggableButton(parentId, name)
+
+               - parentId: The id of the parent element where the button will be added
+               - name: The name of the button
+   
+
+            // add a box area to allow the removal of a card when dragged in
+            addRemoveCardBox(parentId)
+            
+               - parentId: The id of the parent element where the box will be added
+         </pre>
+      </div>
+
+
+    </div>
+    
+
+ </body>
+
+</html>

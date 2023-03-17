@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>Custom Cards Landing Page</title>
+
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer type="text/javascript" src='js/customCards.js'></script>
+    <script defer type="text/javascript" src='js/final.js'></script>
+
+    <link rel="stylesheet" href="js/style.css">
+ </head>
+ <body>
+
+   <div id='wrapper'>
+      <h1 class='display' id='title'>Custom Cards</h1>
+
+      <div class="display">
+         <h4><a href="/code">Code For Examples</a></h4>
+         <h4><a href="/api">API</a></h4>
+      </div>
+
+      <div class='display'>
+         <strong>Getting started: </strong>
+         <br/>
+         Required scripts/imports:
+         <br/>
+         <pre>
+            &lt;script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+            &lt;script defer type="text/javascript" src='js/customCards.js'&gt;&lt;/script&gt;
+            &lt;link rel="stylesheet" href="js/style.css"&gt;
+         </pre>
+         The code for the examples demonstrated on this page can be found in the <a href="/code">Code For Examples</a> page; the name of each example is in the form of [NAME].
+      </div><br>
+
+      <div class='display' id='add-bt'>
+         <strong>[Add Card]</strong> Add cards with a simple button: 
+      </div>
+      <div id='card-add'></div>
+
+
+      <div class='display' id='add-template-bt'>
+         <strong>[Add Card with template]</strong> You can also create/add cards based on an existing card and use it as a template, which will inherit all of its styles: 
+      </div>
+      <div id='card-add-template'></div>
+
+
+      <div class="display" id='change-title-single-bt'>
+         <strong>[Change title]</strong> You can change the title of a card: 
+      </div>
+      <div id='card-change-title-single'></div>
+
+      <div class="display" id='change-title-bt'>
+         <strong>[Change titles]</strong> Or you can change the titles of multiple cards: 
+      </div>
+      <div id='card-change-title'></div>
+
+
+      <div class="display" id='edit-body-single-bt'>
+         <strong>[Edit body]</strong> You can edit the body of a card: 
+      </div>
+      <div id='card-edit-body-single'></div>
+
+
+      <div class="display" id='add-elem-bt'>
+         <strong>[Add element]</strong> You can add an element to the body of a card, and the size of the Card will grow dynamically with the content inside. Here for example it is adding a blue circle: 
+      </div>
+      <div id='card-add-elem'></div>
+
+
+      <div class="display" id='modify-color-bt'>
+         <strong>[Change color]</strong> You can change the color of cards, here are a few examples: 
+      </div>
+      <div id='card-modify-color'></div>
+
+
+      <div class="display" id='modify-size-bt'>
+         <strong>[Change size]</strong> You can change the minimum size of cards, here are a few examples: 
+      </div>
+      <div id='card-modify-size'></div>
+
+
+      <div class='display' id='collapsible-bt'>
+         <strong>[Make collapsible]</strong> You can make cards collapsible, click on the title of a card to collapse its content, and click it again to show the content. When the title contains the "-" symbol, it means that clicking on it will collapse the card, if it has the "+" symbol, it means that clicking on it will show the content of the card: 
+      </div>
+      <div id='card-collapsible'></div>
+
+
+      <div class='display' id='draggable-bt'>
+         <strong>[Make draggable]</strong> You can make cards draggable; cards can be dropped onto another card to switch the position of the two cards: 
+      </div>
+      <div id='card-draggable'></div>
+
+
+      <div class='display' id='remove-box'>
+         <strong>[Remove box]</strong> You can also remove a card by dragging it into an area such as the box below: 
+      </div>
+
+
+      <div class='display' id='combined-bt'>
+         <strong>[Combined features]</strong> Here is some cards with some combined features: 
+      </div>
+      <div id='card-combined'></div>
+
+
+   </div>
+    
+
+ </body>
+
+</html>
